@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Lectura cancelada", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "El valor escaneado es: ${result.contents}", Toast.LENGTH_SHORT).show()
+                binding.txtResultado.setText("${result.contents}")
             }
         }else{
             super.onActivityResult(requestCode, resultCode, data)
